@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel = "icon" href = "{% static 'images/logo.jpeg' %}" type = "image/x-icon">
+    <script src="https://kit.fontawesome.com/69c632f6b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <header id="first-head">
+    <span>Classic</span><img src="{% static 'images/logo.jpeg' %}" alt=""><span>Printers</span>
+  </header>
+    <section class="head">
+        <div class="image">
+            <img src="{% static 'images/logo.jpeg' %}" alt="">
+            <!-- <h1>logo</h1> -->
+        </div>
+        <div class="head-title">
+            <p>For anything you think, we’ve got ink.</p>
+        </div>
+        <div class="search-bar">
+                <input type="text" placeholder="Search"/>
+        </div>
+        <div class="login">
+                <h1>login</h1>
+        </div>
+    </section>
+   <!-- <hr style="background-color:#232325"> -->
+   <div id="navigation">
+        <nav id="navbar2" class="navbar">
+            <div>
+                <ul>
+                    <li><a href="">All Products</a></li>
+                    <li><a href="">New Arrivals</a></li>
+                    <li><a href="">Stationary</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Marketing</a></li>
+                    <li><a href="">Merchnadise</a></li>
+                    <li><a href="">Gadgets</a></li>
+                    <li><a href="">Bags</a></li>
+                    <li><a href="">Packaging</a></li>
+                    <li><a href="">Onboarding Kits</a></li>
+                </ul>
+            </div>
+        </nav>
+   </div>
+        <!-- <hr style="background-color:#232325"> -->
+    {% block body %}{% endblock %}
+      <div class="foot">
+        <div class="theme">
+          <div class="theme-image">
+          <img src="{% static 'images/logonew.png' %}" alt="">
+          </div>
+          <div class="theme-title">
+             <p>Shaping what you dreamt of.</p>
+          </div>
+         
+        </div>
+        <div class="contacts">
+          <div class="con-title">
+            <h1>Contact Us</h1>
+          </div>
+          <div class="con-values">
+            <div class="email">
+              <h3>Email</h3>
+              <p>faizan.19b121056@abes.ac.in</p>
+            </div>
+            <div class="mobile">
+              <h3>Mobile Number</h3>
+              <p>9315380225</p>
+            </div>
+            <div class="address">
+              <h3>Address</h3>
+              <p>2nd E 131 Nehru Nagar Ghaziabad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="last-footer">
+       <div class="data"></div>
+       <div class="payment">
+            <div class="pay1"><img src="{% static 'images/Visa.svg.png' %}" alt=""></div>
+            <div class="pay1"><img src="{% static 'images/Mastercard_logo.0.jpg' %}" alt=""></div>
+            <div class="pay1"><img src="{% static 'images/download.jpeg' %}" alt=""></div>
+      </div>
+      <div class="social">
+        <div class="social1"><img src="{% static 'images/twitter.png' %}" alt=""></div>
+        <div class="social1"><img src="{% static 'images/facebook.png' %}" alt=""></div>
+        <div class="insta"><img src="{% static 'images/insta.jpeg' %}" alt=""></div>
+      </div>
+      <div class="country"></div>
+      </div>
+      <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
