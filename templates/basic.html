@@ -9,15 +9,19 @@
     <link rel = "icon" href = "{% static 'images/logo.jpeg' %}" type = "image/x-icon">
     <script src="https://kit.fontawesome.com/69c632f6b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="http://fonts.cdnfonts.com/css/elianto" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Gudea' rel='stylesheet'>
+             
 </head>
 <body>
   <header id="first-head">
-    <span>Classic</span><img src="{% static 'images/logo.jpeg' %}" alt=""><span>Printers</span>
+    <span>CLASSIC</span><img src="{% static 'images/logo2.png' %}" alt=""><span>PRINTERS</span>
   </header>
-    <section class="head">
+    <!-- <section class="head">
         <div class="image">
             <img src="{% static 'images/logo.jpeg' %}" alt="">
-            <!-- <h1>logo</h1> -->
+           
         </div>
         <div class="head-title">
             <p>For anything you think, we’ve got ink.</p>
@@ -28,7 +32,7 @@
         <div class="login">
                 <h1>login</h1>
         </div>
-    </section>
+    </section> -->
    <!-- <hr style="background-color:#232325"> -->
    <div id="navigation">
         <nav id="navbar2" class="navbar">
@@ -50,43 +54,61 @@
    </div>
         <!-- <hr style="background-color:#232325"> -->
     {% block body %}{% endblock %}
+    <div class="first-foot">
+      <div class="foot-form">
+        <form action="">
+          <div class="form-head">
+            <h1>GET IN TOUCH</h1>
+          </div>
+         
+          <div class="input-name">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+          </div>
+          <div class="text-area">
+            <input type="textarea" rows="7" cols="100" placeholder="Type your message here..">
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
       <div class="foot">
         <div class="theme">
           <div class="theme-image">
+            <div class="th-image">
           <img src="{% static 'images/logonew.png' %}" alt="">
+            </div>
+          </div>
+          <div class="company-name">
+            <div class="cname">
+            <p>CLASSIC PRINTERS</p>
+            </div>
           </div>
           <div class="theme-title">
-             <p>Shaping what you dreamt of.</p>
+            <div class="th-title">
+             <p><i>Shaping what you dreamt of.</i></p>
+            </div>
           </div>
          
         </div>
-        <div class="contacts">
-          <div class="con-title">
-            <h1>Contact Us</h1>
-          </div>
-          <div class="con-values">
-            <div class="email">
-              <h3>Email</h3>
-              <p>faizan.19b121056@abes.ac.in</p>
-            </div>
-            <div class="mobile">
-              <h3>Mobile Number</h3>
-              <p>9315380225</p>
-            </div>
-            <div class="address">
-              <h3>Address</h3>
-              <p>2nd E 131 Nehru Nagar Ghaziabad</p>
-            </div>
+        <div class="mid-section"></div>
+        <div class="mail">
+          <div class="mail-detail">
+            <p>Mail Us:</p>
+            <p>faizan.19b121056@abes.ac.in</p>
+            <p>+919315380225</p>
           </div>
         </div>
+        <div class="address"></div>
       </div>
       <div class="last-footer">
+        <div class="payment">
+          <div class="pay1"><img src="{% static 'images/Visa.svg.png' %}" alt=""></div>
+          <div class="pay1"><img src="{% static 'images/Mastercard_logo.0.jpg' %}" alt=""></div>
+          <div class="pay1"><img src="{% static 'images/download.jpeg' %}" alt=""></div>
+    </div>
        <div class="data"></div>
-       <div class="payment">
-            <div class="pay1"><img src="{% static 'images/Visa.svg.png' %}" alt=""></div>
-            <div class="pay1"><img src="{% static 'images/Mastercard_logo.0.jpg' %}" alt=""></div>
-            <div class="pay1"><img src="{% static 'images/download.jpeg' %}" alt=""></div>
-      </div>
+      
       <div class="social">
         <div class="social1"><img src="{% static 'images/twitter.png' %}" alt=""></div>
         <div class="social1"><img src="{% static 'images/facebook.png' %}" alt=""></div>
