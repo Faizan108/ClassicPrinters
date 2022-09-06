@@ -28,9 +28,17 @@ const carouselImage8_1 = document.querySelector(".carousel-image-8_1");
 const carouselImage10 = document.querySelector(".carousel-image-10");
 const carouselImage11= document.querySelector(".carousel-image-11");
 const carouselImage12= document.querySelector(".carousel-image-12");
+const carouselImage10_1= document.querySelector(".carousel-image-10_1");
+const carouselImage11_1= document.querySelector(".carousel-image-11_1");
 const numberOfImages = document.querySelectorAll(".carousel-image").length;
-let imageIndex = 1;
-let translateX = 0;
+let imageIndex1 = 1;
+let translateX1 = 0;
+let imageIndex2 = 1;
+let translateX2 = 0;
+let imageIndex3 = 1;
+let translateX3 = 0;
+let imageIndex4 = 1;
+let translateX4= 0;
 
 carouselButtonLeft.addEventListener("click", slideLeft);
 carouselButtonRight.addEventListener("click", slideRight);
@@ -42,98 +50,110 @@ carouselButtonLeft3.addEventListener("click", slideLeft4);
 carouselButtonRight3.addEventListener("click", slideRight4);
 
 function slideLeft(){
-    if (imageIndex !== 1){
-        imageIndex--;
-        translateX += 700;
-        carouselImage1.style.transform = `translateX(${translateX}px)`;
-        carouselImage2.style.transform = `translateX(${translateX}px)`;
-        carouselImage3.style.transform = `translateX(${translateX}px)`;
-        carouselImage1_1.style.transform = `translateX(${translateX}px)`;
-        carouselImage2_1.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex1 !== 1){
+        imageIndex1--;
+        translateX1 += document.querySelector('.carousel1').offsetWidth;
+        carouselImage1.style.transform = `translateX(${translateX1}px)`;
+        carouselImage2.style.transform = `translateX(${translateX1}px)`;
+        carouselImage3.style.transform = `translateX(${translateX1}px)`;
+        carouselImage1_1.style.transform = `translateX(${translateX1}px)`;
+        carouselImage2_1.style.transform = `translateX(${translateX1}px)`;
     }
     
 }
 function slideLeft1(){
-    if (imageIndex !== 1){
-        imageIndex--;
-        translateX += 650;
-        carouselImage4.style.transform = `translateX(${translateX}px)`;
-        carouselImage5.style.transform = `translateX(${translateX}px)`;
-        carouselImage6.style.transform = `translateX(${translateX}px)`;
-        carouselImage4_1.style.transform = `translateX(${translateX}px)`;
-        carouselImage5_1.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex2 !== 1){
+        imageIndex2--;
+        translateX2 += document.querySelector('.carousel11').offsetWidth;
+        carouselImage4.style.transform = `translateX(${translateX2}px)`;
+        carouselImage5.style.transform = `translateX(${translateX2}px)`;
+        carouselImage6.style.transform = `translateX(${translateX2}px)`;
+        carouselImage4_1.style.transform = `translateX(${translateX2}px)`;
+        carouselImage5_1.style.transform = `translateX(${translateX2}px)`;
     }
     
 }
 function slideLeft3(){
-    if (imageIndex !== 1){
-        imageIndex--;
-        translateX += 939;
-        carouselImage7.style.transform = `translateX(${translateX}px)`;
-        carouselImage8.style.transform = `translateX(${translateX}px)`;
-        carouselImage9.style.transform = `translateX(${translateX}px)`;
-        carouselImage7_1.style.transform = `translateX(${translateX}px)`;
-        carouselImage8_1.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex3 !== 1){
+        imageIndex3--;
+        translateX3 += document.querySelector('.carousel12').offsetWidth;;
+        carouselImage7.style.transform = `translateX(${translateX3}px)`;
+        carouselImage8.style.transform = `translateX(${translateX3}px)`;
+        carouselImage9.style.transform = `translateX(${translateX3}px)`;
+        carouselImage7_1.style.transform = `translateX(${translateX3}px)`;
+        carouselImage8_1.style.transform = `translateX(${translateX3}px)`;
     }
     
 }
 function slideLeft4(){
-    if (imageIndex !== 1){
-        imageIndex--;
-        translateX += 700;
-        carouselImage10.style.transform = `translateX(${translateX}px)`;
-        carouselImage11.style.transform = `translateX(${translateX}px)`;
-        carouselImage12.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex4 !== 1){
+        imageIndex4--;
+        translateX4 += document.querySelector('.carousel13').offsetWidth;;
+        carouselImage10.style.transform = `translateX(${translateX4}px)`;
+        carouselImage11.style.transform = `translateX(${translateX4}px)`;
+        carouselImage12.style.transform = `translateX(${translateX4}px)`;
+        carouselImage10_1.style.transform = `translateX(${translateX4}px)`;
+        carouselImage11_1.style.transform = `translateX(${translateX4}px)`;
     }
     
 }
 
 function slideRight(){
-    if (imageIndex !== 5){
-        imageIndex++;
-        translateX -= 700;
-        carouselImage1.style.transform = `translateX(${translateX}px)`;
-        carouselImage2.style.transform = `translateX(${translateX}px)`;
-        carouselImage3.style.transform = `translateX(${translateX}px)`;
-        carouselImage1_1.style.transform = `translateX(${translateX}px)`;
-        carouselImage2_1.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex1 !== 5){
+        imageIndex1++;
+        // alert(document.querySelector('.carousel1').offsetWidth);
+        translateX1 -= document.querySelector('.carousel1').offsetWidth;
+        // alert(translateX1);
+        carouselImage1.style.transform = `translateX(${translateX1}px)`;
+        carouselImage2.style.transform = `translateX(${translateX1}px)`;
+        carouselImage3.style.transform = `translateX(${translateX1}px)`;
+        carouselImage1_1.style.transform = `translateX(${translateX1}px)`;
+        carouselImage2_1.style.transform = `translateX(${translateX1}px)`;
     }
-    
+    else{
+        // translateX1 -= document.querySelector('.carousel1').offsetWidth;
+        translateX1=0
+        carouselImage1.style.transform=`translateX(${translateX1}px)`;
+        translateX1=0;
+        imageIndex1=1;
+    }
 }
 
 function slideRight2(){
-    if (imageIndex !== 5){
-        imageIndex++;
-        translateX -= 650;
-        carouselImage4.style.transform = `translateX(${translateX}px)`;
-        carouselImage5.style.transform = `translateX(${translateX}px)`;
-        carouselImage6.style.transform = `translateX(${translateX}px)`;
-        carouselImage4_1.style.transform = `translateX(${translateX}px)`;
-        carouselImage5_1.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex2 !== 5){
+        imageIndex2++;
+        translateX2 -= document.querySelector('.carousel11').offsetWidth;
+        carouselImage4.style.transform = `translateX(${translateX2}px)`;
+        carouselImage5.style.transform = `translateX(${translateX2}px)`;
+        carouselImage6.style.transform = `translateX(${translateX2}px)`;
+        carouselImage4_1.style.transform = `translateX(${translateX2}px)`;
+        carouselImage5_1.style.transform = `translateX(${translateX2}px)`;
     }
     
 }
 function slideRight3(){
-    if (imageIndex !== 5){
-        imageIndex++;
-        translateX -= 939;
-        carouselImage7.style.transform = `translateX(${translateX}px)`;
-        carouselImage8.style.transform = `translateX(${translateX}px)`;
-        carouselImage9.style.transform = `translateX(${translateX}px)`;
-        carouselImage7_1.style.transform = `translateX(${translateX}px)`;
-        carouselImage8_1.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex3 !== 5){
+        imageIndex3++;
+        translateX3 -= document.querySelector('.carousel12').offsetWidth;;
+        carouselImage7.style.transform = `translateX(${translateX3}px)`;
+        carouselImage8.style.transform = `translateX(${translateX3}px)`;
+        carouselImage9.style.transform = `translateX(${translateX3}px)`;
+        carouselImage7_1.style.transform = `translateX(${translateX3}px)`;
+        carouselImage8_1.style.transform = `translateX(${translateX3}px)`;
     }
     
 }
 function slideRight4(){
-    if (imageIndex !== 3){
-        imageIndex++;
-        translateX -= 700;
-        carouselImage10.style.transform = `translateX(${translateX}px)`;
-        carouselImage11.style.transform = `translateX(${translateX}px)`;
-        carouselImage12.style.transform = `translateX(${translateX}px)`;
+    if (imageIndex4 !== 5){
+        imageIndex4++;
+        translateX4 -= document.querySelector('.carousel13').offsetWidth;;
+        carouselImage10.style.transform = `translateX(${translateX4}px)`;
+        carouselImage11.style.transform = `translateX(${translateX4}px)`;
+        carouselImage12.style.transform = `translateX(${translateX4}px)`;
+        carouselImage10_1.style.transform = `translateX(${translateX4}px)`;
+        carouselImage11_1.style.transform = `translateX(${translateX4}px)`;
     }
-    
+  
 }
 var counter=1;
 setInterval(function(){
@@ -148,18 +168,18 @@ setInterval(function(){
         let id1=event.target.id;
         counter=parseInt(id1[id1.length-1]);
     });
-},2000)
+},4000)
 
-window.onscroll = function() {myFunction()};
-var navbar = document.getElementById("navbar2");
-var head=document.getElementById("first-head");
-var sticky = navbar.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-    head.classList.add("sticky2");
-  } else {
-    navbar.classList.remove("sticky");
-    head.classList.remove("sticky2");
-  }
-}
+// window.onscroll = function() {myFunction()};
+// var navbar = document.getElementById("navbar2");
+// var head=document.getElementById("first-head");
+// var sticky = navbar.offsetTop;
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky");
+//     head.classList.add("sticky2");
+//   } else {
+//     navbar.classList.remove("sticky");
+//     head.classList.remove("sticky2");
+//   }
+// }
