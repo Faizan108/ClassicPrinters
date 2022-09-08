@@ -40,9 +40,9 @@ def signin(request):
     if User.isauthenticated:
         return redirect(home)
     if request.method=='POST':
-        uname=request.POST['uname']
         fname=request.POST['fname']
         lname=request.POST['lname']
+        uname=fname+lname
         email=request.POST['email']
         pass1=request.POST['pass']
         pass2=request.POST['pass2']
@@ -78,4 +78,7 @@ def contactus(request):
         msg=request.POST['cmsg']
         newcontact=Contactus(c_name=name, c_phone=phone, c_mail=mail, msg=msg)
         newcontact.save()
-        return HttpResponse('Hello WOrld')
+        # messages.success("Data Success Fully Sent")
+        return redirect('home')
+    # messages.error("Data Not Sent")
+    return redirect('home')

@@ -182,12 +182,17 @@ $(document).on('submit','#contact-form',function(e){
             cmail:$('#cmail').val(),
             cphone:$('#cphone').val(),
             cmsg:$('#cmsg').val(),
-            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
         },
         success:function(){
             window.alert('Your Data Has Been Sent');
-        }
+            document.getElementById('#cname').value="";
+            document.getElementById('#cmail').value="";
+            document.getElementById('#cphone').value="";
+            document.getElementById('#cmsg').value="";
+        },
     });
+
 });
 
 // window.onscroll = function() {myFunction()};
