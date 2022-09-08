@@ -208,3 +208,9 @@ $(document).on('submit','#contact-form',function(e){
 //     head.classList.remove("sticky2");
 //   }
 // }
+document.querySelector('.login-button').addEventListener('click',function(){
+    document.querySelector('.lform').style.display='block';
+    // alert("hello");
+    // console.log("hello");
+});
+console.log("hello");

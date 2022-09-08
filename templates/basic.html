@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +35,6 @@
         </div>
     </section> -->
    <!-- <hr style="background-color:#232325"> -->
-   <h1>hello</h1>
    <div id="navigation">
         <nav id="navbar2" class="navbar">
             <div>
@@ -58,19 +56,19 @@
     {% block body %}{% endblock %}
     <div class="first-foot">
       <div class="foot-form">
-        <form id="contact-form">{% csrf_token %}
+        <form action="">
           <div class="form-head">
-            <h1 id="success">GET IN TOUCH</h1>
+            <h1>GET IN TOUCH</h1>
           </div>
           <div class="input-name">
-            <input type="text" placeholder="Name" name="cname" id="cname" required>
-            <input type="email" placeholder="Email" name="cmail" id="cmail" required>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
           </div>
           <div class="phone">
-            <input type="text" placeholder="Phone Number" name="cphone" id="cphone" required>
+            <input type="text" placeholder="Phone Number">
           </div>
           <div class="text-area">
-            <input type="textarea" rows="7" cols="100" placeholder="Type your message here.." name="cmsg" id="cmsg" required>
+            <input type="textarea" rows="7" cols="100" placeholder="Type your message here..">
           </div>
           <button type="submit">Submit</button>
         </form>
