@@ -1,5 +1,11 @@
 "use strict"
+document.querySelector('.login-button').addEventListener('click',function(){
+    document.querySelector('.lform').style.display='block';
+});
 
+document.querySelector('.close-button').addEventListener('click',function(){
+    document.querySelector('.lform').style.display='none';
+});
 
 const carouselButtons = document.querySelectorAll(".carousel-btn");
 const carouselButtonLeft = document.querySelector(".btn-left");
