@@ -170,6 +170,26 @@ setInterval(function(){
     });
 },4000)
 
+
+
+$(document).on('submit','#contact-form',function(e){
+    e.preventDefault();
+    $.ajax({
+        type:'POST',
+        url:'/contactus/',
+        data:{
+            cname:$('#cname').val(),
+            cmail:$('#cmail').val(),
+            cphone:$('#cphone').val(),
+            cmsg:$('#cmsg').val(),
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success:function(){
+            window.alert('Your Data Has Been Sent');
+        }
+    });
+});
+
 // window.onscroll = function() {myFunction()};
 // var navbar = document.getElementById("navbar2");
 // var head=document.getElementById("first-head");

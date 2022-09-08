@@ -46,6 +46,9 @@ class visiting_card(models.Model):
     card_price=models.IntegerField(default=300)
     card_image=models.ImageField(upload_to='Visiting Cards/',default='')
 
+    def __str__(self):
+        return self.card_name
+
 
 
 # LetterHead
@@ -68,6 +71,9 @@ class letter_head(models.Model):
     lh_price=models.IntegerField(default=300)
     lh_image=models.ImageField(upload_to='Letter Heads/',default='')
 
+    def __str__(self):
+        return self.lh_name
+
 # Brochure
 
 
@@ -83,6 +89,9 @@ class brochure(models.Model):
     bro_art_paper=models.IntegerField(default=100)
     bro_price=models.IntegerField(default=300)
     bro_image=models.ImageField(upload_to='Brochure/',default='')
+
+    def __str__(self):
+        return self.bro_name
 
 
 #envelope
@@ -103,3 +112,17 @@ class envelope(models.Model):
     env_cat=models.CharField(choices=ecat, default='Doctors', max_length=25)
     env_price=models.IntegerField(default=300)
     env_image=models.ImageField(upload_to='Envelope/',default='')
+
+    def __str__(self):
+        return self.env_name
+
+
+class Contactus(models.Model):
+    cid=models.AutoField
+    c_name=models.CharField(default="", max_length=40)
+    c_phone=models.IntegerField(default=0)
+    c_mail=models.CharField(default="", max_length=30)
+    msg=models.CharField(default="", max_length=100)
+
+    def __str__(self):
+        return self.c_name
