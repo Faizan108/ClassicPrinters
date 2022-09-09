@@ -56,9 +56,9 @@ def signin(request):
     return redirect(home)
 
 
-def login(request):
-    if User.is_authenticated:
-        return redirect(home)
+def hanlogin(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     if(request.method=='POST'):
         uname=request.POST['username']
         pass1=request.POST['password']
@@ -81,4 +81,8 @@ def contactus(request):
         # messages.success("Data Success Fully Sent")
         return redirect('home')
     # messages.error("Data Not Sent")
+    return redirect('home') 
+
+def logout(request):
+    userlogout(request)
     return redirect('home')
