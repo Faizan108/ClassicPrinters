@@ -20,15 +20,15 @@
   <div class="login-form">
     <div class="form-content">
         <h1>LOGIN</h1>
-        <form action="">
+        <form action="/hanlogin/" method="POST">{% csrf_token %}
             <div class="data1">
             <label for="email" class="Email">Email or Username</label>
             
-            <input type="text" id="email" required>
+            <input type="text" id="email" name="username" required>
             </div>
             <div class="data1">
                 <label for="passw" class="pass">Password</label>
-                <input type="password" id="passw">
+                <input type="password" id="passw" name="password">
             </div>
             <h3><a href="">Forgot Password?</a></h3>
             <div class="btn"><button type="submit">LOGIN</button></div>
@@ -86,9 +86,15 @@
                     <li><a href="">Onboarding Kits</a></li>
                 </ul>
             </div>
+            {% if user.is_authenticated %}
+            <div class="login-button">
+              <button>Welcome {{user.first_name}}</button>
+            </div>
+            {% else %}
             <div class="login-button">
                 <button>Login/SignUp</button>
             </div>
+            {% endif %}
         </nav>
    </div>
         <!-- <hr style="background-color:#232325"> -->

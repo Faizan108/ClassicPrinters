@@ -28,5 +28,7 @@ urlpatterns = [
     path('contactus/', views.contactus, name='contact'),
     path('search/', views.search, name='search'),
     path('signin/', views.signin, name='signin'),
+    path('hanlogin/', views.hanlogin, name='hanlogin'),
+    path('logout/', views.logout, name='logout'),
     path('accounts/', include('allauth.urls')),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
