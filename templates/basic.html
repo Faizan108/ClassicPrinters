@@ -126,7 +126,7 @@
             <div>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/products/products">All Products</a></li>
+                    <li><a href="/products">All Products</a></li>
                     <li><a href="/products/vis_card">Visting Cards</a></li>
                     <li><a href="/products/letter_heads">Letter Heads</a></li>
                     <li><a href="/products/brochure">Brochure</a></li>
@@ -154,7 +154,7 @@
   </div>
         <!-- <hr style="background-color:#232325"> -->
     {% block body %}{% endblock %}
-    <div class="first-foot">
+    <div id="cform" class="first-foot">
       <div class="foot-form">
         <form id="contact-form">{% csrf_token %}
           <div class="form-head">
@@ -207,7 +207,7 @@
             <div>
               <p>Let us help:</p>
               <p><a href="">FAQ</a></p>
-              <p><a href="">Contact us</a></p>
+              <p><a href="#cform">Contact us</a></p>
             </div>
           </div>
         </div>
