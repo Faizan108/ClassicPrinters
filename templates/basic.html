@@ -55,30 +55,30 @@
   <div class="signup-form">
     <div class="form-content">
         <h1>SIGNUP</h1>
-        <form action="">
+        <form action="/signin/" method="POST">{% csrf_token %}
             <div class="data2">
-            <label for="email" class="Email">First Name</label>
+            <label for="fname" class="Email">First Name</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="f_name" id="fname" required>
             </div>
             <div class="data2">
-            <label for="email" class="Email">Last Name</label>
+            <label for="lname" class="Email">Last Name</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="l_name" id="lname" required>
             </div>
             <div class="data2">
             <label for="email" class="Email">Email</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="e_mail" id="email" required>
             </div>
             <div class="data2">
-            <label for="email" class="Email">Password</label>
+            <label for="pass1" class="Email">Password</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="pass1" id="pass1" required>
             </div>
             <div class="data2">
-                <label for="passw" class="pass">Confirm Password</label>
-                <input type="password" id="passw">
+                <label for="pass2" class="pass">Confirm Password</label>
+                <input type="password" name="pass2" id="pass2" required>
             </div>
             <!-- <h3><a href="">Forgot Password?</a></h3> -->
             <div class="btn"><button type="submit">SIGNUP</button></div>
@@ -170,6 +170,7 @@
           <div class="text-area">
             <input type="textarea" rows="7" cols="100" placeholder="Type your message here.." id="cmsg" name="cmsg" required>
           </div>
+          <h5 id="error"></h5>
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -188,6 +189,7 @@
           </div>
           <div class="theme-title">
             <div class="th-title">
+              <br>
              <p><i>Shaping what you dreamt of.</i></p>
             </div>
           </div>

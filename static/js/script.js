@@ -200,8 +200,12 @@ $(document).on('submit','#contact-form',function(e){
             cmsg:$('#cmsg').val(),
             csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
         },
-        success:function(){
-            window.alert('Your Data Has Been Sent');
+        success:function(data){
+            if(data.length>0){
+            }
+            else{
+                window.alert('Your Data Has Been Sent');
+            }
         },
     });
 });

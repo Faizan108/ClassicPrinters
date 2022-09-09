@@ -37,22 +37,26 @@ def search(request):
 
 
 def signin(request):
-    if User.isauthenticated:
+    if request.user.is_authenticated:
         return redirect(home)
     if request.method=='POST':
-        fname=request.POST['fname']
-        lname=request.POST['lname']
+        fname=request.POST['f_name']
+        lname=request.POST['l_name']
         uname=fname+lname
-        email=request.POST['email']
-        pass1=request.POST['pass']
+        email=request.POST['e_mail']
+        pass1=request.POST['pass1']
         pass2=request.POST['pass2']
-        if pass1==pass2:
+        if len(pass1)<8:
+            err="Password must be of length 8"
+            return HttpResponse(err)
+        elif pass1!=pass2:
+            err="Password and Confirm Password not same"
+            return HttpResponse(err)
+        else:
             newUser=User.objects.create_user(uname, email, pass1)
             newUser.first_name=fname
             newUser.last_name=lname
             newUser.save()
-        else:
-            pass
     return redirect(home)
 
 
@@ -66,7 +70,8 @@ def hanlogin(request):
         if myuser is not None:
             userlogin(request, myuser)
             return redirect('home')
-    return redirect('home')
+        else:
+            return HttpResponse('Incorrect Username or Password')
 
 
 
@@ -76,12 +81,18 @@ def contactus(request):
         mail=request.POST['cmail']
         phone=request.POST['cphone']
         msg=request.POST['cmsg']
-        newcontact=Contactus(c_name=name, c_phone=phone, c_mail=mail, msg=msg)
-        newcontact.save()
-        # messages.success("Data Success Fully Sent")
-        return redirect('home')
-    # messages.error("Data Not Sent")
-    return redirect('home') 
+        err=""
+        if(len(phone)!=10):
+            err="phone number should be of 10 digit"
+            return HttpResponse(err)
+        for i in range(len(phone)):
+            if(phone[i]<'0' or phone[i]>'9'):
+                err="phone must not contain characters other than digit"
+                return HttpResponse(err)
+        if(len(err)==0):
+            newcontact=Contactus(c_name=name, c_phone=phone, c_mail=mail, msg=msg)
+            newcontact.save()
+    return HttpResponse("")
 
 def logout(request):
     userlogout(request)
