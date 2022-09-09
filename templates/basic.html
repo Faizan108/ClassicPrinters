@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,6 @@
     <link href="http://fonts.cdnfonts.com/css/elianto" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Gudea' rel='stylesheet'>
-             
 </head>
 <body>
   <div class="lform">
@@ -51,6 +51,57 @@
     
 </div>
   </div>
+  <div class="sform">
+  <div class="signup-form">
+    <div class="form-content">
+        <h1>SIGNUP</h1>
+        <form action="">
+            <div class="data2">
+            <label for="email" class="Email">First Name</label>
+            
+            <input type="text" id="email" required>
+            </div>
+            <div class="data2">
+            <label for="email" class="Email">Last Name</label>
+            
+            <input type="text" id="email" required>
+            </div>
+            <div class="data2">
+            <label for="email" class="Email">Email</label>
+            
+            <input type="text" id="email" required>
+            </div>
+            <div class="data2">
+            <label for="email" class="Email">Password</label>
+            
+            <input type="text" id="email" required>
+            </div>
+            <div class="data2">
+                <label for="passw" class="pass">Confirm Password</label>
+                <input type="password" id="passw">
+            </div>
+            <!-- <h3><a href="">Forgot Password?</a></h3> -->
+            <div class="btn"><button type="submit">SIGNUP</button></div>
+          <div class="or"> <p class="or">
+                ----- or continue with -----
+              </p></div>
+              <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+              </div>
+              <!-- <div class="not-member">
+                Not a member? <a href="#">Register Now</a>
+              </div> -->
+             
+        </form>
+        <div class="close-button1">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+    </div>
+    
+</div>
+  </div>
+  <div class="f">
   <header id="first-head">
     <span>CLASSIC</span><img src="{% static 'images/logo2.png' %}" alt=""><span>PRINTERS</span>
   </header>
@@ -74,16 +125,17 @@
         <nav id="navbar2" class="navbar">
             <div>
                 <ul>
-                    <li><a href="/products">All Products</a></li>
-                    <li><a href="/products/vis_card">Visiting Cards</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products/products">All Products</a></li>
+                    <li><a href="/products/vis_card">Visting Cards</a></li>
                     <li><a href="/products/letter_heads">Letter Heads</a></li>
                     <li><a href="/products/brochure">Brochure</a></li>
                     <li><a href="/products/envelope">Envelopes</a></li>
-                    <li><a href="">Coming Soon</a></li>
+                    <li class="coming-soon"><a href="">Coming Soon</a></li>
                     <li><a href="">Contact Us</a></li>
                     <li><a href="">Bags</a></li>
                     <li><a href="">Packaging</a></li>
-                    <li><a href="">Onboarding Kits</a></li>
+                    <!-- <li><a href="">Onboarding Kits</a></li> -->
                 </ul>
             </div>
             <div class="login-button">
@@ -91,34 +143,27 @@
             </div>
         </nav>
    </div>
+  </div>
         <!-- <hr style="background-color:#232325"> -->
     {% block body %}{% endblock %}
     <div class="first-foot">
       <div class="foot-form">
-        <form action="">
+        <form id="contact-form">{% csrf_token %}
           <div class="form-head">
             <h1>GET IN TOUCH</h1>
           </div>
           <div class="input-name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Name" id="cname" name="cname" required>
+            <input type="text" placeholder="Email" id="cmail" name="cmail" required>
           </div>
           <div class="phone">
-            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Phone Number" id="cphone" name="cphone" required>
           </div>
           <div class="text-area">
-            <input type="textarea" rows="7" cols="100" placeholder="Type your message here..">
+            <input type="textarea" rows="7" cols="100" placeholder="Type your message here.." id="cmsg" name="cmsg" required>
           </div>
           <button type="submit">Submit</button>
         </form>
-        {%for message in messages%}
-        <div class="container alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-          <strong>Message:</strong> {{message}}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {%endfor%}
       </div>
     </div>
       <div class="foot">
