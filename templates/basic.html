@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,6 @@
     <link href="http://fonts.cdnfonts.com/css/elianto" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Gudea' rel='stylesheet'>
-             
 </head>
 <body>
   <div class="lform">
@@ -95,30 +95,22 @@
     {% block body %}{% endblock %}
     <div class="first-foot">
       <div class="foot-form">
-        <form action="">
+        <form id="contact-form">{% csrf_token %}
           <div class="form-head">
             <h1>GET IN TOUCH</h1>
           </div>
           <div class="input-name">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Name" id="cname" name="cname" required>
+            <input type="text" placeholder="Email" id="cmail" name="cmail" required>
           </div>
           <div class="phone">
-            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Phone Number" id="cphone" name="cphone" required>
           </div>
           <div class="text-area">
-            <input type="textarea" rows="7" cols="100" placeholder="Type your message here..">
+            <input type="textarea" rows="7" cols="100" placeholder="Type your message here.." id="cmsg" name="cmsg" required>
           </div>
           <button type="submit">Submit</button>
         </form>
-        {%for message in messages%}
-        <div class="container alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-          <strong>Message:</strong> {{message}}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {%endfor%}
       </div>
     </div>
       <div class="foot">
