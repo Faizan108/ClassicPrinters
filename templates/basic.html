@@ -87,9 +87,11 @@
                 </ul>
             </div>
             {% if user.is_authenticated %}
-            <div class="login-button">
+            <a href="/logout">
+            <div class="login-button submit">
               <button>Welcome {{user.first_name}}</button>
             </div>
+            </a>
             {% else %}
             <div class="login-button">
                 <button>Login/SignUp</button>
@@ -182,9 +184,9 @@
        <div class="data"></div>
       
       <div class="social">
-        <div class="social1"><img src="{% static 'images/twitter.png' %}" alt=""></div>
-        <div class="social1"><img src="{% static 'images/facebook.png' %}" alt=""></div>
-        <div class="insta"><img src="{% static 'images/insta.jpeg' %}" alt=""></div>
+        <a href="https://twitter.com/SyedHam73354738"><div class="social1"><img src="{% static 'images/twitter.png' %}" alt=""></div></a>
+        <a href="https://www.facebook.com/syed.hamza.92"><div class="social1"><img src="{% static 'images/facebook.png' %}" alt=""></div></a>
+        <a href="https://www.instagram.com/syedhamzaa14/"><div class="insta"><img src="{% static 'images/insta.jpeg' %}" alt=""></div></a> 
       </div>
       <div class="country"></div>
       </div>
