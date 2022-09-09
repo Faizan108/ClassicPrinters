@@ -2,10 +2,19 @@
 document.querySelector('.login-button').addEventListener('click',function(){
     document.querySelector('.lform').style.display='block';
 });
-
-document.querySelector('.close-button').addEventListener('click',function(){
+document.querySelector('.not-member a').addEventListener('click',function(){
+    document.querySelector('.sform').style.display='block'
     document.querySelector('.lform').style.display='none';
 });
+document.querySelector('.close-button').addEventListener('click',function(){
+    document.querySelector('.lform').style.display='none';
+    
+});
+document.querySelector('.close-button1').addEventListener('click',function(){
+    document.querySelector('.sform').style.display='none';
+    
+});
+console.log("hi");
 
 const carouselButtons = document.querySelectorAll(".carousel-btn");
 const carouselButtonLeft = document.querySelector(".btn-left");
@@ -201,6 +210,7 @@ $(document).on('submit','#contact-form',function(e){
 // var navbar = document.getElementById("navbar2");
 // var head=document.getElementById("first-head");
 // var sticky = navbar.offsetTop;
+// console.log("bye");
 // function myFunction() {
 //   if (window.pageYOffset >= sticky) {
 //     navbar.classList.add("sticky");
@@ -210,3 +220,18 @@ $(document).on('submit','#contact-form',function(e){
 //     head.classList.remove("sticky2");
 //   }
 // }
+// window.onscroll = function() {myFunction()};
+// var navbar = document.getElementById("navbar2");
+// var head=document.getElementById("first-head");
+// var sticky = navbar.offsetTop;
+// console.log("bye");
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky");
+//     head.classList.add("sticky2");
+//   } else {
+//     navbar.classList.remove("sticky");
+//     head.classList.remove("sticky2");
+//   }
+// }
+
