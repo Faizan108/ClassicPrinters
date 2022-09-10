@@ -5,6 +5,14 @@ document.querySelector('.login-button').addEventListener('click',function(){
         document.querySelector('.lform').style.display='none';
     else
         document.querySelector('.lform').style.display='block';
+   let d= document.querySelector('.lform').style.display;
+   if(d=='block')
+   {
+    document.querySelector('.lform').style.display='none';
+   }
+   else{
+    document.querySelector('.lform').style.display='block';
+   }
 });
 document.querySelector('.not-member a').addEventListener('click',function(){
     document.querySelector('.sform').style.display='block'

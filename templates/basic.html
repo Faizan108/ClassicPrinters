@@ -29,6 +29,9 @@
             <div class="data1">
                 <label for="passw" class="pass">Password</label>
                 <input type="password" id="passw" name="password">
+                {% if error %}
+                <p>Wrong Credentials</p>
+                {% endif %}
             </div>
             <h3><a href="">Forgot Password?</a></h3>
             <div class="btn"><button type="submit">LOGIN</button></div>
@@ -131,10 +134,11 @@
                     <li><a href="/products/letter_heads">Letter Heads</a></li>
                     <li><a href="/products/brochure">Brochure</a></li>
                     <li><a href="/products/envelope">Envelopes</a></li>
+                    <li><a href="#cont">Contact Us</a></li>
                     <li class="coming-soon"><a href="">Coming Soon</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Bags</a></li>
-                    <li><a href="">Packaging</a></li>
+                   
+                    <!-- <li><a href="">Bags</a></li>
+                    <li><a href="">Packaging</a></li> -->
                     <!-- <li><a href="">Onboarding Kits</a></li> -->
                 </ul>
             </div>
@@ -154,7 +158,11 @@
   </div>
         <!-- <hr style="background-color:#232325"> -->
     {% block body %}{% endblock %}
+<<<<<<< HEAD
+    <div class="first-foot" id="cont">
+=======
     <div id="cform" class="first-foot">
+>>>>>>> b8858cb2c51143aa29de7ac923d3e782d4e7d2c7
       <div class="foot-form">
         <form id="contact-form">{% csrf_token %}
           <div class="form-head">
@@ -176,25 +184,27 @@
       </div>
     </div>
       <div class="foot">
-        <div class="theme">
-          <div class="theme-image">
-            <div class="th-image">
-          <img src="{% static 'images/logonew.png' %}" alt="">
-            </div>
+       <div class="theme">
+        <div class="classic-theme">
+          <div class="thimage">
+            <img src="{% static 'images/logonew.png' %}" alt="">
           </div>
-          <div class="company-name">
-            <div class="cname">
-            <p>CLASSIC PRINTERS</p>
-            </div>
+          <div class="thtitle">
+            <h2>CLASSIC PRINTERS</h2>
           </div>
+<<<<<<< HEAD
+          <div class="ththeme">
+            <p><i>Shaping what you dreamt of</i></p>
+=======
           <div class="theme-title">
             <div class="th-title">
               <br>
              <p><i>Shaping what you dreamt of.</i></p>
             </div>
+>>>>>>> b8858cb2c51143aa29de7ac923d3e782d4e7d2c7
           </div>
-         
         </div>
+       </div>
         <div class="mid-section">
           <div class="about-us">
             <div>
