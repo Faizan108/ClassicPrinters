@@ -207,7 +207,8 @@ $(document).on('submit','#contact-form',function(e){
             cmsg:$('#cmsg').val(),
             csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
         },
-        success:function(data){
+        success:function(){
+            alert("hello");
             if(data.length>0){
             }
             else{
@@ -245,4 +246,5 @@ $(document).on('submit','#contact-form',function(e){
 //     head.classList.remove("sticky2");
 //   }
 // }
+
 
