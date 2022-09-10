@@ -66,6 +66,8 @@ def hanlogin(request):
         if myuser is not None:
             userlogin(request, myuser)
             return redirect('home')
+        else:
+            return render(request,'home.html',{'error':"Wrong Credentials"})
     return redirect('home')
 
 
