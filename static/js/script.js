@@ -207,9 +207,10 @@ $(document).on('submit','#contact-form',function(e){
             cmsg:$('#cmsg').val(),
             csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
         },
-        success:function(){
-            alert("hello");
+        success:function(data){
+            
             if(data.length>0){
+                window.alert(data);
             }
             else{
                 window.alert('Your Data Has Been Sent');
