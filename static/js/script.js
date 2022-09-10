@@ -1,6 +1,10 @@
 "use strict"
 document.querySelector('.login-button').addEventListener('click',function(){
-    document.querySelector('.lform').style.display='block';
+    var d=document.querySelector('.lform').style.display;
+    if(d=='block')
+        document.querySelector('.lform').style.display='none';
+    else
+        document.querySelector('.lform').style.display='block';
 });
 document.querySelector('.not-member a').addEventListener('click',function(){
     document.querySelector('.sform').style.display='block'
@@ -188,7 +192,6 @@ setInterval(function(){
 
 
 $(document).on('submit','#contact-form',function(e){
-    console.log("Hello");
     e.preventDefault();
     $.ajax({
         type:'POST',
@@ -202,6 +205,7 @@ $(document).on('submit','#contact-form',function(e){
         },
         success:function(data){
             if(data.length>0){
+                window.alert(data)
             }
             else{
                 window.alert('Your Data Has Been Sent');
