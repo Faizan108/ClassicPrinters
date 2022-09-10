@@ -5,14 +5,6 @@ document.querySelector('.login-button').addEventListener('click',function(){
         document.querySelector('.lform').style.display='none';
     else
         document.querySelector('.lform').style.display='block';
-   let d= document.querySelector('.lform').style.display;
-   if(d=='block')
-   {
-    document.querySelector('.lform').style.display='none';
-   }
-   else{
-    document.querySelector('.lform').style.display='block';
-   }
 });
 document.querySelector('.not-member a').addEventListener('click',function(){
     document.querySelector('.sform').style.display='block'
@@ -26,7 +18,6 @@ document.querySelector('.close-button1').addEventListener('click',function(){
     document.querySelector('.sform').style.display='none';
     
 });
-console.log("hi");
 
 const carouselButtons = document.querySelectorAll(".carousel-btn");
 const carouselButtonLeft = document.querySelector(".btn-left");
