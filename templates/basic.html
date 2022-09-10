@@ -58,30 +58,30 @@
   <div class="signup-form">
     <div class="form-content">
         <h1>SIGNUP</h1>
-        <form action="">
+        <form action="/signin/" method="POST">{% csrf_token %}
             <div class="data2">
-            <label for="email" class="Email">First Name</label>
+            <label for="fname" class="Email">First Name</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="f_name" id="fname" required>
             </div>
             <div class="data2">
-            <label for="email" class="Email">Last Name</label>
+            <label for="lname" class="Email">Last Name</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="l_name" id="lname" required>
             </div>
             <div class="data2">
             <label for="email" class="Email">Email</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="e_mail" id="email" required>
             </div>
             <div class="data2">
-            <label for="email" class="Email">Password</label>
+            <label for="pass1" class="Email">Password</label>
             
-            <input type="text" id="email" required>
+            <input type="text" name="pass1" id="pass1" required>
             </div>
             <div class="data2">
-                <label for="passw" class="pass">Confirm Password</label>
-                <input type="password" id="passw">
+                <label for="pass2" class="pass">Confirm Password</label>
+                <input type="password" name="pass2" id="pass2" required>
             </div>
             <!-- <h3><a href="">Forgot Password?</a></h3> -->
             <div class="btn"><button type="submit">SIGNUP</button></div>
@@ -129,7 +129,7 @@
             <div>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/products/products">All Products</a></li>
+                    <li><a href="/products">All Products</a></li>
                     <li><a href="/products/vis_card">Visting Cards</a></li>
                     <li><a href="/products/letter_heads">Letter Heads</a></li>
                     <li><a href="/products/brochure">Brochure</a></li>
@@ -143,9 +143,11 @@
                 </ul>
             </div>
             {% if user.is_authenticated %}
-            <div class="login-button">
+            <a href="/logout">
+            <div class="login-button submit">
               <button>Welcome {{user.first_name}}</button>
             </div>
+            </a>
             {% else %}
             <div class="login-button">
                 <button>Login/SignUp</button>
@@ -156,7 +158,11 @@
   </div>
         <!-- <hr style="background-color:#232325"> -->
     {% block body %}{% endblock %}
+<<<<<<< HEAD
     <div class="first-foot" id="cont">
+=======
+    <div id="cform" class="first-foot">
+>>>>>>> b8858cb2c51143aa29de7ac923d3e782d4e7d2c7
       <div class="foot-form">
         <form id="contact-form">{% csrf_token %}
           <div class="form-head">
@@ -172,6 +178,7 @@
           <div class="text-area">
             <input type="textarea" rows="7" cols="100" placeholder="Type your message here.." id="cmsg" name="cmsg" required>
           </div>
+          <h5 id="error"></h5>
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -185,8 +192,16 @@
           <div class="thtitle">
             <h2>CLASSIC PRINTERS</h2>
           </div>
+<<<<<<< HEAD
           <div class="ththeme">
             <p><i>Shaping what you dreamt of</i></p>
+=======
+          <div class="theme-title">
+            <div class="th-title">
+              <br>
+             <p><i>Shaping what you dreamt of.</i></p>
+            </div>
+>>>>>>> b8858cb2c51143aa29de7ac923d3e782d4e7d2c7
           </div>
         </div>
        </div>
@@ -202,7 +217,7 @@
             <div>
               <p>Let us help:</p>
               <p><a href="">FAQ</a></p>
-              <p><a href="">Contact us</a></p>
+              <p><a href="#cform">Contact us</a></p>
             </div>
           </div>
         </div>
@@ -234,9 +249,9 @@
        <div class="data"></div>
       
       <div class="social">
-        <div class="social1"><img src="{% static 'images/twitter.png' %}" alt=""></div>
-        <div class="social1"><img src="{% static 'images/facebook.png' %}" alt=""></div>
-        <div class="insta"><img src="{% static 'images/insta.jpeg' %}" alt=""></div>
+        <a href="https://twitter.com/SyedHam73354738"><div class="social1"><img src="{% static 'images/twitter.png' %}" alt=""></div></a>
+        <a href="https://www.facebook.com/syed.hamza.92"><div class="social1"><img src="{% static 'images/facebook.png' %}" alt=""></div></a>
+        <a href="https://www.instagram.com/syedhamzaa14/"><div class="insta"><img src="{% static 'images/insta.jpeg' %}" alt=""></div></a> 
       </div>
       <div class="country"></div>
       </div>
